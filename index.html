@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ee">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pilve Cafe</title>
+  </head>
+  <body>
+    <h1>Pilve Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+          <input type="text" name="name" placeholder="Kohviku nimi">
+          <input type="text" name="city" placeholder="Kohviku asukoht">
+          <button>Lisa kohvik</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA65egZU9kkkA3yu9B_wfJBGoO1wU7sfyU",
+        authDomain: "pilve-cafe.firebaseapp.com",
+        databaseURL: "https://pilve-cafe.firebaseio.com",
+        projectId: "pilve-cafe",
+        storageBucket: "pilve-cafe.appspot.com",
+        messagingSenderId: "627852924046"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    //   db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
