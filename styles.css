@@ -1,13 +1,12 @@
-.värvid {
-    background: #7F8688; 
-    background: #929D9E;
-    background: #F3E367;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body{
     background: #7F8688;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea, select, input, button { 
+    outline: none; 
 }
 
 h1{
@@ -23,7 +22,7 @@ h1{
     max-width: 960px;
     margin: 30px auto;
     padding:  20px 30px;
-    border-radius: 10px 120px 10px 10px;
+    border-radius: 30px 30px 30px 30px;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
 }
 
@@ -61,7 +60,7 @@ li div{
     position: absolute;
     top: 0;
     right: 0px;
-    background: rgba(255,255,255,0.6);
+    /* background: rgba(255,255,255,0.6); */
     width: 40px;
     text-align: center;
     padding: 10px 0;
@@ -70,15 +69,11 @@ li div{
 }
 
 form input{
-    float: left;
-    width: 38%;
-    margin: 0;
+
     border: 0;
     border-bottom: 1px solid #eee;
     margin: 0 1%;
     padding: 10px;
-    display: block;
-    box-sizing: border-box;
     font-size: 18px;
 }
 
@@ -89,20 +84,47 @@ form input:focus{
     transition: all ease 0.2s;
 }
 
-form:after{
+/* form:after{
     content: '';
     clear: both;
     display: block;
-}
+} */
 
 button{
+    font-size: 1.5em;
     border: 0;
     background: #F3E367;
     border-radius: 10px;
     padding: 13px;
-    width: 14%;
     box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
     font-weight: bold;
     letter-spacing: 1px;
     color: #999;
+}
+
+button:hover {
+    cursor:pointer;
+    color: #000;
+    transition: all 0.3s linear;
+}
+
+.teema {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .teema {
+        grid-auto-flow: row;
+    }
+    button {
+        margin-top: 2%;
+    }
+}
+
+footer {
+    margin-top: 5%;
+    color:#7F8688;
+    text-align: center;
 }
