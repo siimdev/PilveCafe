@@ -1,130 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body{
     background: #7F8688;
-    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+   
 }
-
-textarea, select, input, button { 
-    outline: none; 
-}
-
-h1{
-    color: #fff;
-    font-size: 64px;
-    letter-spacing: 2px;
-    margin-top: 80px;
-    text-align: center;
-}
-
+main {
+    flex: 1 0 auto;
+  }
+  
 .content{
     background: #fff;
-    max-width: 960px;
-    margin: 30px auto;
+    /* margin: 30px auto; */
     padding:  20px 30px;
-    border-radius: 30px 30px 30px 30px;
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
-}
-
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-li{
-    padding: 20px;
-    background: #f6f6f6;
-    font-size: 20px;
-    color: #555;
-    position: relative;
-    border-bottom: 1px solid #e6e6e6;
-    height: 46px;
-}
-
-li:nth-child(even){
-    padding: 20px;
-    background: #f2f2f2;
-}
-
-li span{
-    display: block;
-}
-
-li span:nth-child(2){
-    font-size: 16px;
-    margin-top: 6px;
-    color: #999;
-}
-
-li div{
-    position: absolute;
-    top: 0;
-    right: 0px;
-    /* background: rgba(255,255,255,0.6); */
-    width: 40px;
-    text-align: center;
-    padding: 10px 0;
-    font-weight:  bold;
-    cursor:  pointer;
-}
-
-form input{
-
-    border: 0;
-    border-bottom: 1px solid #eee;
-    margin: 0 1%;
-    padding: 10px;
-    font-size: 18px;
-}
-
-form input:focus{
-    outline: none;
-    border-bottom: 3px solid #F3E367;
-    padding-bottom: 8px;
-    transition: all ease 0.2s;
-}
-
-/* form:after{
-    content: '';
-    clear: both;
-    display: block;
-} */
-
-button{
-    font-size: 1.5em;
-    border: 0;
-    background: #F3E367;
-    border-radius: 10px;
-    padding: 13px;
-    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #999;
-}
-
-button:hover {
-    cursor:pointer;
-    color: #000;
-    transition: all 0.3s linear;
-}
-
-.teema {
-    display: grid;
-    grid-auto-flow: column;
 }
 
 
-@media only screen and (max-width: 600px) {
-    .teema {
-        grid-auto-flow: row;
-    }
-    button {
-        margin-top: 2%;
-    }
-}
-
-footer {
-    margin-top: 5%;
-    color:#7F8688;
-    text-align: center;
+i.material-icons.secondary-content{
+    cursor: pointer;
 }

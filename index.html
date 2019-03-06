@@ -5,26 +5,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
   <link rel="stylesheet" href="styles.css" />
-  <title>Pilve Cafe</title>
+  <title>Nälg</title>
 </head>
 
 <body>
-  <h1>Pilve Cafe</h1>
-
-  <div class="content">
-    <form id="add-cafe-form" class="teema">
-      <input type="text" name="name" placeholder="Kohviku nimi">
-      <input type="text" name="city" placeholder="Kohviku asukoht">
-      <button>Lisa kohvik</button>
-    </form>
-    <ul id="cafe-list"></ul>
 
 
-    <footer>Siim 2019</footer>
-  </div>
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#" class="brand-logo center">Parimad söögikohad, kuhu sööma minna?</a>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="content card ">
+        <div class="row">
+          <form id="add-cafe-form" class="col s12 m12 l12">
+            <div class="row">
+              <div class="input-field col s12 m12 l4">
+                <i class="material-icons prefix">store</i>
+                <input id="icon_prefix" type="text" name="name">
+                <label for="icon_prefix">Söögikoha nimi</label>
+              </div>
+              <div class="input-field col s12 m12 l4">
+                <i class="material-icons prefix">map</i>
+                <input id="icon_telephone" type="tel" name="city">
+                <label for="icon_telephone">Söögikoha asukoht</label>
+              </div>
+              <div class="input-field">
+                <button class="col s12 m12 l4 waves-effect waves-light btn-large">Lisa söögikoht</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <ul class="collection" id="cafe-list">
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer teal lighten-2">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Siim
+        <a class="grey-text text-lighten-4 right" href="#!">Github</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
   <script src="app.js"></script>
 </body>
 

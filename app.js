@@ -18,14 +18,26 @@ const form = document.querySelector('#add-cafe-form');
 function renderCafe(doc) {
     let li = document.createElement('li');
     let name = document.createElement('span');
-    let city = document.createElement('span');
-    let cross = document.createElement('div');
+    let city = document.createElement('p');
+    let cross = document.createElement('i');
+    let ikoon = document.createElement('i');
+    let a = document.createElement('a');
+
+    li.classList.add("collection-item")
+    li.classList.add("avatar")
+    name.classList.add("title")
+    cross.classList.add("material-icons")
+    cross.classList.add("secondary-content")
+    ikoon.classList.add("material-icons")
+    ikoon.classList.add("circle")
 
     li.setAttribute('data-id', doc.id)
     name.textContent = doc.data().name;
     city.textContent = doc.data().city;
-    cross.textContent = 'x';
+    cross.textContent = 'delete';
+    ikoon.textContent = 'arrow_forward';
 
+    li.appendChild(ikoon);
     li.appendChild(name);
     li.appendChild(city);
     li.appendChild(cross);
